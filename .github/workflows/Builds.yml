@@ -1,6 +1,6 @@
 name: Make Release Builds
 
-on: [workflow_dispatch]
+on: [pull_request, push, workflow_dispatch]
 
 jobs:
   build-linux-appimage:
