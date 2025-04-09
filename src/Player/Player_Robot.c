@@ -77,7 +77,7 @@ static Boolean ShouldApplySlopesToPlayer(float newDistToFloor);
 /*    CONSTANTS             */
 /****************************/
 
-#define	PUNCH_DAMAGE			.50f
+#define	PUNCH_DAMAGE			1.0f
 
 #define	MAX_BUBBLE_SPEED		1200.0f
 
@@ -89,7 +89,7 @@ static Boolean ShouldApplySlopesToPlayer(float newDistToFloor);
 #define	PLAYER_DEFAULT_FRICTION	900.0f
 #define	PLAYER_HEAVY_FRICTION	1900.0f
 
-#define DEBUG_PLAYER_VAPOR		1
+#define DEBUG_PLAYER_VAPOR		0
 #if DEBUG_PLAYER_VAPOR
 	#define PLAYER_VAPOR_THRESHOLD	10.0f
 	#define PLAYER_VAPOR_ALPHA		1.0f
@@ -2822,9 +2822,9 @@ static void CheckPlayerActionControls(ObjNode *theNode)
 		gPlayerInfo.weaponInventory[7].type = WEAPON_TYPE_DART;
 
 		for (int i = 1; i <= 7; i++)
-			gPlayerInfo.weaponInventory[i].quantity = 1000;
+			gPlayerInfo.weaponInventory[i].quantity = 99;
 
-		gPlayerInfo.weaponInventory[4].quantity = 100;		// just one hundred growth vials so we can test tossing it
+		// gPlayerInfo.weaponInventory[4].quantity = 99;
 
 		gPlayerInfo.didCheat = true;
 	}

@@ -465,8 +465,8 @@ short	i;
 	}
 
 	gPlayerInfo.weaponInventory[i].quantity += amount;					// inc current inventory
-	if (gPlayerInfo.weaponInventory[i].quantity > 1000)					// max @ 1000
-		gPlayerInfo.weaponInventory[i].quantity = 1000;
+	if (gPlayerInfo.weaponInventory[i].quantity > 99)					// max @ 99
+		gPlayerInfo.weaponInventory[i].quantity = 99;
 }
 
 
