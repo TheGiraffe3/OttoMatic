@@ -35,17 +35,17 @@ static void MakeOttoFromSaucer(ObjNode *saucer);
 /*    CONSTANTS             */
 /****************************/
 
-#define	PLAYER_SAUCER_HOVER_HEIGHT	450.0f
+#define	PLAYER_SAUCER_HOVER_HEIGHT	900.0f
 
-#define	PLAYER_SAUCER_SCALE			.6f
+#define	PLAYER_SAUCER_SCALE			.8f
 
-#define	PLAYER_SAUCER_MAX_SPEED		900.0f
+#define	PLAYER_SAUCER_MAX_SPEED		1800.0f
 
-#define	CONTROL_SENSITIVITY_SAUCER	900.0f
+#define	CONTROL_SENSITIVITY_SAUCER	2000.0f
 
-#define	SHADOW_RADIUS				200.0f
+#define	SHADOW_RADIUS				230.0f
 
-#define	MAX_HUMANS_IN_SAUCER		10
+#define	MAX_HUMANS_IN_SAUCER		15
 
 #define	OTTO_SAUCER_SCALE			(PLAYER_DEFAULT_SCALE * .5f)
 
@@ -83,13 +83,13 @@ void InitPlayer_Saucer(OGLPoint3D *where)
 ObjNode	*newObj;
 float	y;
 
-	gNumHumansInSaucer = 0;									// no humans in the saucer yet
+	gNumHumansInSaucer = 4;									// no humans in the saucer yet
 
 
 	gBeamIsCharging 		= gBeamIsDischarging = false;
-	gBeamCharge 			= 0;
+	gBeamCharge 			= 1;
 	gBeamChargeEffectChannel = -1;
-	gNumHumansInTransit 	= 0;
+	gNumHumansInTransit 	= 1;
 	gBeamMode = gBeamModeSelected = BEAM_MODE_DESTRUCTO;
 
 		/* FIND THE Y COORD TO START */

@@ -77,19 +77,19 @@ static Boolean ShouldApplySlopesToPlayer(float newDistToFloor);
 /*    CONSTANTS             */
 /****************************/
 
-#define	PUNCH_DAMAGE			.25f
+#define	PUNCH_DAMAGE			.50f
 
-#define	MAX_BUBBLE_SPEED		400.0f
+#define	MAX_BUBBLE_SPEED		1200.0f
 
-#define	PLAYER_NORMAL_MAX_SPEED	900.0f
+#define	PLAYER_NORMAL_MAX_SPEED	1800.0f
 
 #define	PLAYER_SLOPE_ACCEL		3000.0f
 
-#define	PLAYER_AIR_FRICTION		400.0f
-#define	PLAYER_DEFAULT_FRICTION	1200.0f
-#define	PLAYER_HEAVY_FRICTION	2700.0f
+#define	PLAYER_AIR_FRICTION		250.0f
+#define	PLAYER_DEFAULT_FRICTION	900.0f
+#define	PLAYER_HEAVY_FRICTION	1900.0f
 
-#define DEBUG_PLAYER_VAPOR		0
+#define DEBUG_PLAYER_VAPOR		1
 #if DEBUG_PLAYER_VAPOR
 	#define PLAYER_VAPOR_THRESHOLD	10.0f
 	#define PLAYER_VAPOR_ALPHA		1.0f
@@ -99,13 +99,13 @@ static Boolean ShouldApplySlopesToPlayer(float newDistToFloor);
 #endif
 
 #define	JUMP_DELTA					1800.0f
-#define	JUMP_JET_ACCELERATION		2000.0f
-#define	JUMP_JET_ACCELERATION_GIANT	(JUMP_JET_ACCELERATION * .5f)
+#define	JUMP_JET_ACCELERATION		3000.0f
+#define	JUMP_JET_ACCELERATION_GIANT	(JUMP_JET_ACCELERATION * 1.5f)
 #define	JUMP_JET_DECELERATION		2000.0f
 
 #define	DELTA_SUBDIV			15.0f				// smaller == more subdivisions per frame
 
-#define	CONTROL_SENSITIVITY		2200.0f
+#define	CONTROL_SENSITIVITY		3700.0f
 #define	CONTROL_SENSITIVITY_AIR	5000.0f
 
 #define	CONTROL_SENSITIVITY_PR_TURN	4.0f
@@ -279,8 +279,8 @@ void MovePlayer_Robot(ObjNode *theNode)
 		MovePlayerRobot_Walk,							// walk with gun
 		MovePlayerRobot_Stand,							// stand with gun
 		MovePlayerRobot_Punch,							// punch
-		MovePlayerRobot_PickupAndDeposit,							// pickup
-		MovePlayerRobot_PickupAndHoldGun,						// pickup2
+		MovePlayerRobot_PickupAndDeposit,				// pickup
+		MovePlayerRobot_PickupAndHoldGun,				// pickup2
 		MovePlayerRobot_Grabbed,						// grabbed
 		MovePlayerRobot_Flattened,						// flattened
 		MovePlayerRobot_Charging,						// charging
@@ -2807,8 +2807,8 @@ static void CheckPlayerActionControls(ObjNode *theNode)
 
 	if (GetCheatKeyCombo())
 	{
-		if (gPlayerInfo.lives < 3)
-			gPlayerInfo.lives 	= 3;
+		if (gPlayerInfo.lives < 6)
+			gPlayerInfo.lives 	= 6;
 		gPlayerInfo.health 	= 1.0;
 		gPlayerInfo.fuel 	= 1.0;
 		gPlayerInfo.jumpJet = 1.0;
@@ -2822,9 +2822,9 @@ static void CheckPlayerActionControls(ObjNode *theNode)
 		gPlayerInfo.weaponInventory[7].type = WEAPON_TYPE_DART;
 
 		for (int i = 1; i <= 7; i++)
-			gPlayerInfo.weaponInventory[i].quantity = 99;
+			gPlayerInfo.weaponInventory[i].quantity = 1000;
 
-		gPlayerInfo.weaponInventory[4].quantity = 1;		// just one growth vial so we can test tossing it
+		gPlayerInfo.weaponInventory[4].quantity = 100;		// just one hundred growth vials so we can test tossing it
 
 		gPlayerInfo.didCheat = true;
 	}

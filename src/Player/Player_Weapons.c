@@ -57,10 +57,10 @@ static void ExplodeDart(ObjNode *theNode);
 
 #define	STUN_PULSE_SPEED	3500.0f
 
-#define	FREEZE_BULLET_SPEED	1500.0f
-#define FLAME_BULLET_SPEED	1700.0f
-#define	FLARE_BULLET_SPEED	1000.0f
-#define	DART_SPEED			900.0f
+#define	FREEZE_BULLET_SPEED	3000.0f
+#define FLAME_BULLET_SPEED	3400.0f
+#define	FLARE_BULLET_SPEED	2000.0f
+#define	DART_SPEED			1800.0f
 
 typedef struct
 {
@@ -117,7 +117,7 @@ int	i;
 			/* ALWAYS HAS FIST AS WEAPON */
 
 	gPlayerInfo.weaponInventory[0].type = WEAPON_TYPE_FIST;
-	gPlayerInfo.weaponInventory[0].quantity = 99;
+	gPlayerInfo.weaponInventory[0].quantity = 1000;
 	gPlayerInfo.currentWeaponType = WEAPON_TYPE_FIST;
 	gPlayerInfo.holdingGun = false;
 }
@@ -465,8 +465,8 @@ short	i;
 	}
 
 	gPlayerInfo.weaponInventory[i].quantity += amount;					// inc current inventory
-	if (gPlayerInfo.weaponInventory[i].quantity > 99)					// max @ 99
-		gPlayerInfo.weaponInventory[i].quantity = 99;
+	if (gPlayerInfo.weaponInventory[i].quantity > 1000)					// max @ 1000
+		gPlayerInfo.weaponInventory[i].quantity = 1000;
 }
 
 
