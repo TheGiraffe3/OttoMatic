@@ -145,7 +145,7 @@ static Boolean	JungleGate_HitByWeaponHandler(ObjNode *weaponObj, ObjNode *gate, 
 	if (!weaponObj)
 		goto nope;
 
-	if ((weaponObj->Kind == WEAPON_TYPE_FIST) && (gPlayerInfo.scaleRatio > 1.0f))
+	if ((weaponObj->Kind == WEAPON_TYPE_FIST) && (gPlayerInfo.scaleRatio < 1.0f))
 		DoTrig_JungleGate(gate, nil, 0);
 	else
 	{
