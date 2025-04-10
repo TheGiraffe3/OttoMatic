@@ -2807,8 +2807,8 @@ static void CheckPlayerActionControls(ObjNode *theNode)
 
 	if (GetCheatKeyCombo())
 	{
-		if (gPlayerInfo.lives < 3)
-			gPlayerInfo.lives 	= 3;
+		if (gPlayerInfo.lives < 6)
+			gPlayerInfo.lives 	= 6;
 		gPlayerInfo.health 	= 1.0;
 		gPlayerInfo.fuel 	= 1.0;
 		gPlayerInfo.jumpJet = 1.0;

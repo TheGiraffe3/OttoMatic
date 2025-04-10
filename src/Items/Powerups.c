@@ -1549,8 +1549,8 @@ ObjNode		*shadowObj;
 
 		case	GROWTH_MODE_GROW:
 
-				gPlayerInfo.scale += gFramesPerSecondFrac;
-				if (gPlayerInfo.scale > PLAYER_GIANT_SCALE)					// keep pinned at max scale
+				gPlayerInfo.scale -= gFramesPerSecondFrac;
+				if (gPlayerInfo.scale < PLAYER_GIANT_SCALE)					// keep pinned at max scale
 				{
 					gPlayerInfo.scale = PLAYER_GIANT_SCALE;
 
@@ -1568,8 +1568,8 @@ ObjNode		*shadowObj;
 				/*************/
 
 		case	GROWTH_MODE_SHRINK:
-				gPlayerInfo.scale -= gFramesPerSecondFrac;
-				if (gPlayerInfo.scale <= PLAYER_DEFAULT_SCALE)				// see if back to normal
+				gPlayerInfo.scale += gFramesPerSecondFrac;
+				if (gPlayerInfo.scale >= PLAYER_DEFAULT_SCALE)				// see if back to normal
 				{
 					gPlayerInfo.scale = PLAYER_DEFAULT_SCALE;
 					gPlayerInfo.growMode = GROWTH_MODE_NONE;
