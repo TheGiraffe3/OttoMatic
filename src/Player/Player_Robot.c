@@ -95,7 +95,7 @@ static Boolean ShouldApplySlopesToPlayer(float newDistToFloor);
 	#define PLAYER_VAPOR_ALPHA		1.0f
 #else
 	#define	PLAYER_VAPOR_THRESHOLD	700.0f
-	#define PLAYER_VAPOR_ALPHA		0f
+	#define PLAYER_VAPOR_ALPHA		0.0f
 #endif
 
 #define	JUMP_DELTA					1800.0f
