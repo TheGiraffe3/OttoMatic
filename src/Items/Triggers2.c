@@ -532,7 +532,7 @@ Boolean DoTrig_LeafPlatform(ObjNode *theNode, ObjNode *whoNode, Byte sideBits)
 
 	if (gDelta.y < -700.0f)
 	{
-		if (gPlayerInfo.scaleRatio < 1.0f)			// if giant lands on this then crush
+		if (gPlayerInfo.scaleRatio > 1.0f)			// if giant lands on this then crush
 		{
 			theNode->SpecialF[1] = .3f;
 			theNode->WobbleIndex = PI;

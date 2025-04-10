@@ -171,7 +171,7 @@ static const EffectDef kEffectsTable[] =
 	[EFFECT_FREEZEPOOF]       = {SOUNDBANK_MAIN   , "FreezePoof"      , 300 , 0	},
 	[EFFECT_CHANGEWEAPON]     = {SOUNDBANK_MAIN   , "ChangeWeapon"    , 300 , 0	},
 	[EFFECT_MENUCHANGE]       = {SOUNDBANK_MAIN   , "MenuChange"      , 1200, 0	},
-	[EFFECT_GIANTFOOTSTEP]    = {SOUNDBANK_MAIN   , "GiantFootstep"   , 1500, 0	},
+	[EFFECT_GIANTFOOTSTEP]    = {SOUNDBANK_MAIN   , "GiantFootstep"   , 300, 0	},
 
 	[EFFECT_LOGOAMBIENCE]     = {SOUNDBANK_MENU   , "Ambience"        , 1200, 0	},
 	[EFFECT_ACCENTDRONE1]     = {SOUNDBANK_MENU   , "AccentDrone1"    , 1200, 0	},
