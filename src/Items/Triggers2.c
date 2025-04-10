@@ -392,7 +392,7 @@ Boolean DoTrig_Smashable(ObjNode *theNode, ObjNode *whoNode, Byte sideBits)
 
 #pragma unused(sideBits,whoNode)
 
-	if (gPlayerInfo.scaleRatio <= 1.0f)
+	if (gPlayerInfo.scaleRatio < 1.0f)
 		return(true);
 
 	ExplodeGeometry(theNode, 800, SHARD_MODE_BOUNCE, 1, .5);
@@ -532,7 +532,7 @@ Boolean DoTrig_LeafPlatform(ObjNode *theNode, ObjNode *whoNode, Byte sideBits)
 
 	if (gDelta.y < -700.0f)
 	{
-		if (gPlayerInfo.scaleRatio > 1.0f)			// if giant lands on this then crush
+		if (gPlayerInfo.scaleRatio < 1.0f)			// if giant lands on this then crush
 		{
 			theNode->SpecialF[1] = .3f;
 			theNode->WobbleIndex = PI;
