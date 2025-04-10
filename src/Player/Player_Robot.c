@@ -87,7 +87,7 @@ static Boolean ShouldApplySlopesToPlayer(float newDistToFloor);
 
 #define	PLAYER_AIR_FRICTION		400.0f
 #define	PLAYER_DEFAULT_FRICTION	1200.0f
-#define	PLAYER_HEAVY_FRICTION	2700.0f
+#define	PLAYER_HEAVY_FRICTION	200.0f
 
 #define DEBUG_PLAYER_VAPOR		0
 #if DEBUG_PLAYER_VAPOR
@@ -95,12 +95,12 @@ static Boolean ShouldApplySlopesToPlayer(float newDistToFloor);
 	#define PLAYER_VAPOR_ALPHA		1.0f
 #else
 	#define	PLAYER_VAPOR_THRESHOLD	700.0f
-	#define PLAYER_VAPOR_ALPHA		0.2f
+	#define PLAYER_VAPOR_ALPHA		0f
 #endif
 
 #define	JUMP_DELTA					1800.0f
 #define	JUMP_JET_ACCELERATION		2000.0f
-#define	JUMP_JET_ACCELERATION_GIANT	(JUMP_JET_ACCELERATION * .5f)
+#define	JUMP_JET_ACCELERATION_GIANT	(JUMP_JET_ACCELERATION * 1.5f)
 #define	JUMP_JET_DECELERATION		2000.0f
 
 #define	DELTA_SUBDIV			15.0f				// smaller == more subdivisions per frame
